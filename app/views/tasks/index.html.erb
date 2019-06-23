@@ -1,9 +1,13 @@
-<h1>タスクリスト一覧</h1>
+<div class="center jumbotron">
+  <div class="text-center">
+    <h1>タスクリスト一覧</h1>
 
-<ul>
-  <% @tasks.each do |task| %>
-  <li><%= link_to task.id, task %> : <%= task.content %> <%= task.status %></li>
-  <% end %>
-</ul>
+    <ul>
+      <% @tasks.each do |task| %>
+      <li><%= link_to task.id, task %> : <%= task.content %> <%= task.status %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 <%= link_to '新規タスク作成', new_task_path %>
